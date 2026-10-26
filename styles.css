@@ -11,3 +11,6 @@
 .site-nav{gap:22px}.scenario-section{border-top:1px solid var(--line);background:#101916}.visual-elemental{background:radial-gradient(circle at 51% 49%,#a5bc806b,#405a41 33%,#1c342d 70%,#142621)}.collection-intro{max-width:760px;color:var(--muted);font-size:18px;line-height:1.7;margin-bottom:36px}.scenario-empty{border:1px dashed #61775d;padding:44px;background:#18241c}.scenario-empty h3{font:500 clamp(26px,3vw,40px)/1.15 var(--head);letter-spacing:-.04em}.scenario-empty>p:not(.eyebrow){max-width:690px;line-height:1.7;color:var(--muted)}[hidden]{display:none!important}#scenario-grid:empty{display:none}.scenario-section .project-grid{margin-bottom:30px}.scenario-status{color:var(--accent)}
 @media(min-width:651px) and (max-width:1000px){.brand-label{display:none}.site-nav{gap:16px;font-size:10px}}
 @media(max-width:650px){.scenario-empty{padding:28px 22px}}
+
+/* Museum download */
+.case-download{margin-top:32px}.download-button{display:inline-flex;align-items:center;justify-content:center;gap:20px;max-width:100%;padding:18px 24px;border:1px solid var(--accent);background:var(--accent);color:var(--bg);font:500 13px/1.5 var(--mono);letter-spacing:.02em;text-align:center;transition:background .2s,color .2s}.download-button:hover{background:var(--bg);color:var(--accent)}.download-button span{font-size:20px}.case-download .small-note{margin:12px 0 0}
