@@ -14,3 +14,52 @@
 
 /* Museum download */
 .case-download{margin-top:32px}.download-button{display:inline-flex;align-items:center;justify-content:center;gap:20px;max-width:100%;padding:18px 24px;border:1px solid var(--accent);background:var(--accent);color:var(--bg);font:500 13px/1.5 var(--mono);letter-spacing:.02em;text-align:center;transition:background .2s,color .2s}.download-button:hover{background:var(--bg);color:var(--accent)}.download-button span{font-size:20px}.case-download .small-note{margin:12px 0 0}
+
+/* Hero radar animation — preserves the original CSS art. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-art::before {
+    content: '';
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    left: 50%;
+    top: 49%;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, transparent 0deg, transparent 285deg, #b6ed7600 310deg, #b6ed7626 350deg, #b6ed7655 359deg, transparent 360deg);
+    transform: translate(-50%, -50%);
+    animation: radar-sweep 14s linear infinite;
+    pointer-events: none;
+  }
+  .hero-art .orbit-two {
+    animation: radar-orbit 42s linear infinite;
+  }
+  .hero-art .orbit-three {
+    animation: radar-orbit-reverse 70s linear infinite;
+  }
+  .hero-art .art-core {
+    animation: radar-core-pulse 5s ease-in-out infinite;
+  }
+  .hero-art .orbit-one {
+    animation: radar-ring-pulse 6s ease-in-out infinite;
+  }
+}
+@keyframes radar-sweep {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes radar-orbit {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes radar-orbit-reverse {
+  from { transform: translate(-50%, -50%) rotate(360deg); }
+  to { transform: translate(-50%, -50%) rotate(0deg); }
+}
+@keyframes radar-core-pulse {
+  0%, 100% { transform: translate(-50%, -50%) rotate(45deg) scale(1); box-shadow: 0 0 35px #b6ed7626; }
+  50% { transform: translate(-50%, -50%) rotate(45deg) scale(1.045); box-shadow: 0 0 65px #b6ed7650; }
+}
+@keyframes radar-ring-pulse {
+  0%, 100% { opacity: .75; box-shadow: 0 0 18px #b6ed761a, inset 0 0 18px #b6ed7615; }
+  50% { opacity: 1; box-shadow: 0 0 35px #b6ed7636, inset 0 0 30px #b6ed7626; }
+}
